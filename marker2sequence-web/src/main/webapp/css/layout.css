@@ -1,0 +1,421 @@
+@CHARSET "UTF-8";
+
+img {
+    border: 0px;
+    padding: 2px;
+}
+body {
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+body #canvas {
+    position:relative;
+    top:-1px;
+    width:1007px;
+    margin:0 auto;
+    text-align:left;
+    border-top:1px solid #fff;
+}
+
+#canvas #logobar {
+    position:absolute;
+    top:20px;
+    width:100%;
+}
+#canvas #logobar #logo{
+    width:60%;
+    position:static;
+    text-align: left;
+    margin-left:5px;
+    vertical-align: top;
+}
+
+#canvas #logobar #logo img {
+    padding:0px;
+    margin-right:3px;
+}
+#canvas #logobar #login
+{
+    float:right;
+    font-family:Arial,Helvetica,sans-serif;
+    text-align: right;
+    margin-right: 8px;
+    vertical-align: top;
+    width:30%;
+}
+
+#canvas #menubackground  #hornav 
+{
+    /*This (and the next) style is only for placing the div on the page and some other stuff.
+	The rest is to be found in the file: SpryMenuBarHorizontal.css in the map SpryAssets*/
+    width: 100%;
+    background-image: url(/images/bground_menu.gif);
+    background-repeat: repeat-x;
+    background-position: top;
+    background-color: #003366;
+    margin-left: -10px;
+    margin-right: 170px;
+}
+
+#canvas #menubackground 
+{
+    /*See the commment in the style above.*/
+    position:absolute;
+    top:70px;
+    width: 105%;
+    height: 28px;
+    background-image: url(/images/bground_menu.gif);
+    background-repeat: repeat-x;
+    background-color: #003366;
+}
+
+#contentcontainer {
+    margin:100px 0 0 0;
+}
+body #contentcontainer {
+    /*zoom:1; unknown property  delete??*/
+    /* background:url("../../images/contentcontainer.gif") top right repeat-y; */
+}
+#contentcontainer #maincontent {
+    position:relative;
+    float:left;
+    /* width:733px; */
+}
+
+#maincontent #pagecontainer {
+    /* background:url("../images/backgrounds/content.gif") 0 0 repeat-y; */
+    padding:0 0 0 24px;
+    position:relative;
+    /* width:710px; */
+    z-index:1;
+}
+#maincontent #pagecontainer #context {
+    float:left;
+    position:relative;
+    top:0;
+    left:0px;
+    width:180px;
+    padding:10px 0 0 0;
+}
+#maincontent #pagecontainer #context img {
+    margin-top: 15px;
+    padding:3px 3px 3px 3px;
+    background-color: #C71400;
+}
+
+#maincontent #pagecontainer #context #randomImage img {
+    border: 1px solid blue;
+    background-color: aqua;
+
+}
+#maincontent #pagecontainer #context #login img {
+    width:15px;
+    background-color: transparent;
+}
+#maincontent #pagecontainer #content {
+    float:right;
+    position:relative;
+    /* top:30px; */
+    padding:10px 0px 20px 0px;
+    margin:0 0 50px 0;
+    width:794px;
+    overflow:auto;
+}
+#maincontent #pagecontainer #content img {
+    margin: 0 5px 0 0;
+}
+
+#maincontent #pagecontainer #subcontent {
+    float:left;
+    padding:10px 0 0 0;
+    margin:10px 0 0 10px;
+    /* background:url("../images/subcontent-bg-800.gif") 0 0 no-repeat; */
+    margin:0 0 0 10px;
+    width:232px;
+    border-top:1px solid #d8d8d8;
+    background:none;
+}
+
+/* Footer */
+#footer {
+    clear:both;
+    height:35px;
+    position:relative;
+    height:35px;
+    /* left:12px; */
+    width:auto;
+}
+
+#footer img {
+    padding: 5px 2px 0px 2px;
+    border: 0px;
+}
+#footer ul {
+    margin:0;
+    padding:11px 0 0 20px;
+    list-style:none;
+}
+
+#footer li {
+    float:left;
+    color:#007EC6;
+    margin:0 10px 0 0;
+}
+
+#footer li a {
+    border-right:1px solid #C6BFDC;
+    color:#997EAE;
+    padding:0 10px 0 0;
+}
+#footer li.textsize a {
+    background:url("../images/backgrounds/textsize.gif") no-repeat top right;
+    padding:0 38px 0 0;
+    border:0;
+}
+#footer strong {
+    font-weight:normal;
+}
+
+/* Box style part */
+.boxpart
+{
+    BORDER-RIGHT: #ccd6e0 1px solid;
+    BORDER-TOP: #ccd6e0 1px solid;
+    BORDER-LEFT: #ccd6e0 1px solid;
+    BORDER-BOTTOM: #ccd6e0 1px solid;
+    margin-bottom: 14px;
+}
+.boxpart .kop
+{
+    PADDING-LEFT: 10px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 0.9em;
+    COLOR: #003366;
+    BORDER-BOTTOM: #ccd6e0 1px solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #81A6B8;
+
+}
+.boxpart .kop a
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 1.0em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+    text-decoration: none;
+}
+.boxpart .kop a:hover
+{
+    text-decoration: underline;
+}
+.boxpart .datum
+{
+    PADDING-LEFT: 10px;
+    padding-top: 7px;
+    FONT-SIZE: 0.7em;
+    FONT-WEIGHT: bold;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+}
+.boxpart .titel
+{
+    padding-left:10px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    FONT-SIZE: 0.9em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+}
+.boxpart .bullet
+{
+    PADDING-LEFT: 17px;
+    vertical-align:top;
+    padding-top:8px;
+}
+.boxpart .titel a
+{
+    FONT-SIZE: 0.8em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+    text-decoration: none;
+}
+.boxpart .titel a:hover
+{
+    text-decoration: underline;
+}
+.boxpart .content
+{
+    PADDING-LEFT: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    FONT-SIZE: 0.8em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+}
+.boxpart .content a
+{
+    FONT-SIZE: 0.8em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+}
+.boxpart .regel1
+{
+    PADDING-LEFT: 10px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    FONT-SIZE: 0.8em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+    text-align: left;
+}
+.boxpart .regel2
+{
+    PADDING-LEFT: 10px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    FONT-SIZE: 0.8em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+    background-color: #dfdfdf;
+    text-align: left;
+}
+.boxpart .leeg
+{
+    PADDING-LEFT: 10px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    FONT-SIZE: 0.8em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+}
+.boxpart .list
+{
+    padding-top: 3px;
+    padding-left: 5px;
+}
+.boxpart .list a
+{
+    FONT-SIZE: 0.75em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+    text-decoration: none;
+}
+.boxpart .list a:hover
+{
+    text-decoration: underline;
+}
+.boxpart .link
+{
+    padding-top: 3px;
+    padding-left: 17px;
+    padding-bottom: 2px;
+}
+.boxpart .link a
+{
+    FONT-SIZE: 0.75em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+    text-decoration: none;
+}
+.boxpart .link a:hover
+{
+    text-decoration: underline;
+}
+.boxpart .meer
+{
+    padding-top: 2px;
+    PADDING-LEFT: 5px;
+    padding-bottom: 9px;
+    FONT-SIZE: 0.9em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+}
+.boxpart .meer a
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 0.75em;
+    COLOR: #003366;
+    FONT-FAMILY: Arial;
+    text-decoration: none;
+}
+.boxpart .meer a:hover
+{
+    text-decoration: underline;
+}
+
+/*.Rotate90
+{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}*/
+
+hr
+{
+    height:2px;
+    background-color:#C71400;
+    border:0px;
+}
+
+a.css3button  {
+     background: url(../images/background.gif) bottom repeat-x #9eabb3;
+     padding: 5px 10px 5px 10px;
+     text-align: center;
+     font-weight: bold;
+     color: #fff;
+     text-decoration: none; border: 1px inset #aaa;
+     -webkit-border-radius: 8px; width: auto; -moz-border-radius: 8px;  -khtml-border-radius: 8px;  border-radius: 8px;
+     -moz-box-shadow: 1px 1px 1px #666;  -webkit-box-shadow: 1px 1px 1px #666;  box-shadow: 1px 1px 1px #666;
+     text-shadow: rgba(0,0,0, .5) 0px -1px 0px;
+      border-top: inset 1px #ccc; border-left: inset 1px #ccc; border-bottom: solid 1px solid #000; border-right: 1px solid #666;
+}
+
+a.css3button:hover  {
+     background: #999;
+     text-shadow: rgba(0,0,0, .5) 0px 1px 0px;
+}
+
+.clear { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+
+a.button {
+    background: transparent url('../images/buttons/bg_button_a.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    text-decoration: none;
+}
+
+a.button span {
+    background: transparent url('../images/buttons/bg_button_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+}
+
+a.button:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; /* push text down 1px */
+}
+
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}

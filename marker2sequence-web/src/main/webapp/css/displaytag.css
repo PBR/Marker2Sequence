@@ -1,0 +1,168 @@
+/* DisplayTag CSS
+Modified version of the DisplayTag default css
+Richard Finkers, okt 2009
+*/
+
+table {
+	border: 1px solid #666;
+	/*width: 80%;*/
+	margin: 8px 0 0px 0 !important; /*was 20px 0 20px 0. This line interferes with the menu*/
+}
+
+th,td {
+	padding: 2px 4px 2px 4px !important;
+	text-align: left;
+	vertical-align: top;
+}
+
+thead tr {
+	background-color: #81A6B8;
+}
+
+th.sorted {
+	background-color: #A39D7B;
+}
+
+th a,th a:visited {
+	color: black;
+}
+
+th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;
+}
+
+th.sortable a {
+	background-image: url(../images/arrow_off.png);
+        background-repeat:no-repeat;
+}
+
+th.order1 a {
+	background-image: url(../images/arrow_down.png);
+        background-repeat:no-repeat;
+}
+
+th.order2 a {
+	background-image: url(../images/arrow_up.png);
+        background-repeat:no-repeat;
+}
+
+tr.odd {
+	background-color: #dfdfdf;
+}
+
+tr.tableRowEven,tr.even {
+	/*background-color: #fea*/
+}
+
+div.exportlinks {
+	background-color: #eee;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	margin: 2px 0 10px 0;
+	width: 95%;
+}
+
+span.export {
+	padding: 0 4px 1px 20px;
+	display: inline;
+	display: inline-block;
+	cursor: pointer;
+}
+
+span.excel {
+	background-image: url(../images/ico_file_excel.png);
+        background-repeat:no-repeat;
+}
+
+span.csv {
+	background-image: url(../images/ico_file_csv.png);
+        background-repeat:no-repeat;
+}
+
+span.xml {
+	background-image: url(../images/ico_file_xml.png);
+        background-repeat:no-repeat;
+}
+
+span.pdf {
+	background-image: url(../images/ico_file_pdf.png);
+        background-repeat:no-repeat;
+}
+
+span.rtf {
+	background-image: url(../images/ico_file_rtf.png);
+        background-repeat:no-repeat;
+}
+
+span.pagebanner {
+	background-color: #eee;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	width: 95%;
+	margin-top: 10px;
+	display: block;
+	border-bottom: none;
+}
+
+span.pagelinks {
+	background-color: #eee;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	width: 95%;
+	display: block;
+	border-top: none;
+	margin-bottom: -5px;
+}
+
+
+.group-1 {
+    font-weight:bold;
+    padding-bottom:10px;
+    border-top:1px solid black;
+}
+.group-2 {
+    font-style:italic;
+    border-top: 1px solid black;
+
+}
+.subtotal-sum, .grandtotal-sum {
+    font-weight:bold;
+    text-align:right;
+}
+.subtotal-header {
+    padding-bottom: 0px;
+    border-top: 1px solid white;
+}
+.subtotal-label, .grandtotal-label {
+    border-top: 1px solid white;
+    font-weight: bold;
+}
+.grouped-table tr.even {
+    background-color: #fff;
+}
+.grouped-table tr.odd {
+    background-color: #fff;
+}
+.grandtotal-row {
+    border-top: 2px solid black;
+}
+
+/* displayBox GenotypeDetailsReport style part */
+.GenoReportTable .imageBox {
+    width:195px;
+}
+.GenoReportTable .imageBox img {
+    padding:0px;
+    margin:0px;
+    border:0px;
+}
+.GenoReportTable .number {
+    text-align:right;
+}

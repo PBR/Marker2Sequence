@@ -1,0 +1,17 @@
+svg {
+  font: 10px sans-serif;
+  shape-rendering: optimize-speed;
+}
+
+circle {
+  opacity: 0.6;
+}
+
+rect {
+  opacity: 0.6;
+}
+
+.hstripe {
+  opacity: 0.2;
+}
+

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <description>Deployment information for BreeDB</description>
+    <display-name>marker2sequence</display-name>
+    <session-config>
+        <session-timeout>360</session-timeout>
+    </session-config>
+    <context-param>
+        <description>Theme for the layout page</description>
+        <param-name>theme</param-name>
+        <param-value>PBR</param-value>
+    </context-param>
+    <context-param>
+        <description>URL of the sparql server</description>
+        <param-name>sparqlserver</param-name>
+        <param-value>http://sparql.plantbreeding.nl:8080/sparql</param-value>
+    </context-param>
+    <context-param>
+        <description>Name of the specie for which to deploy the instance.
+        At the moment it can be in: Tomato, Potato, Arabidopsis
+        </description>
+        <param-name>m2sSpecies</param-name>
+        <param-value>Tomato</param-value>
+<!--        <param-value>Potato</param-value>-->
+<!--        <param-value>Arabidopsis</param-value>-->
+    </context-param>
+    <context-param>
+        <description>Folder / Experiment to be used for the random image display</description>
+        <param-name>randomImageFolder</param-name>
+        <param-value>AKK08_CC</param-value>
+<!--        <param-value>TQ1</param-value>-->
+<!--                <param-value>FT2008_P</param-value>-->
+    </context-param>
+    <context-param>
+        <description>Switch biomoby interaction ON (true)/OFF (false).
+        Should only be switched off on development systems or during demos
+        without internet access!
+        </description>
+        <param-name>BioMoby</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <description>Default BioMoby repository</description>
+        <param-name>BioMobyCentral</param-name>
+        <param-value>KÖLN</param-value>
+    </context-param>
+    <context-param>
+        <description>BioMoby via SSL connection</description>
+        <param-name>BioMobySSL</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <description>Timeout value (in millisecond) used by the SOAP client</description>
+        <param-name>WsTimeOut</param-name>
+        <param-value>30000</param-value>
+    </context-param>
+    <context-param>
+        <description>Show BioMoby client debug output</description>
+        <param-name>BioMobyDebug</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <description>is this a production environment?</description>
+        <param-name>productionServer</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <description>Friendly name to be used in email.</description>
+        <param-name>adminName</param-name>
+        <param-value>Richard Finkers</param-value>
+    </context-param>
+    <context-param>
+        <description>Sends emails to this address</description>
+        <param-name>adminEmail</param-name>
+        <param-value>breedb@xs4all.nl</param-value>
+    </context-param>
+    <context-param>
+        <description>email gateway</description>
+        <param-name>smtp</param-name>
+        <param-value>localhost</param-value>
+    </context-param>
+    <filter>
+        <description>Selects a random Image and makes it available on the session scope</description>
+        <filter-name>RandomImageFilter</filter-name>
+        <filter-class>nl.wur.plantbreeding.www.util.RandomImageFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>ResponseOverrideFilter</filter-name>
+        <filter-class>org.displaytag.filter.ResponseOverrideFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ResponseOverrideFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/struts-config.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>detail</param-name>
+            <param-value>2</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/errorPages/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/errorPages/403.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/errorPages/500.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>javax.security.sasl.AuthenticationException</exception-type>
+        <location>/errorPages/AuthenticationException.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>javax.security.auth.login.LoginException</exception-type>
+        <location>/errorPages/AuthenticationException.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException</exception-type>
+        <location>/errorPages/SqlException.jsp</location>
+    </error-page>
+    <servlet>
+        <servlet-name>DisplayChart</servlet-name>
+        <servlet-class>nl.wur.plantbreeding.jfreechart.DisplayChart</servlet-class>
+        <load-on-startup>4</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplayChart</servlet-name>
+        <url-pattern>/servlet/DisplayChart</url-pattern>
+    </servlet-mapping>
+</web-app>

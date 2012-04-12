@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /ccImages/
+Disallow: /login/
+Disallow: /images/
+Disallow: /css/
+Disallow: /js/

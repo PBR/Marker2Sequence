@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+@import "styleguide.css"; /* Define the basic style of the different elements */
+@import "layout.css"; /* Define the layout of the page */
+@import "menu.css";/* Laout of the menu */
+@import "displaytag.css"; /* Layout of the tables */
+@import "ui-lightness/jquery-ui-1.8.16.custom.css";
+@import "jqcloud.css";
