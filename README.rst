@@ -30,13 +30,13 @@ build the sources using:
 
  mvn clean install
 
-This will run the unit-tests which are present in marker2sequence-lib.
+The unit-tests of ``marker2sequence-lib`` are off by default.
 These tests relie on a sparql endpoint being available and containing a
 defined number of information.
 
-To build the project without running the unit-test, you can run:
+To build the project with the unit-test, you can run:
 
- mvn clean install -Dmaven.test.skip=true
+ mvn clean install -DskipTests=false
 
 
 License

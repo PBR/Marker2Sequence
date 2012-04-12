@@ -43,6 +43,9 @@
             </roles>
         </developer>
     </developers>
+    <properties>
+        <skipTests>true</skipTests>
+    </properties>
     <build>
         <plugins>
             <plugin>
