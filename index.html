@@ -38,15 +38,18 @@
         <article class="markdown-body">
           <h1>Marker2sequence</h1>
 
-<p>:Author: Pierre-Yves Chibon <a href="mailto:pierre-yves.chibon@wur.nl">pierre-yves.chibon@wur.nl</a>, <a href="mailto:pingou@pingoured.fr">pingou@pingoured.fr</a>
-:Author: Richard Finkers <a href="mailto:richard.finkers@wur.nl">richard.finkers@wur.nl</a></p>
+<p>
+    Author: Pierre-Yves Chibon <a href="mailto:pierre-yves.chibon@wur.nl">pierre-yves.chibon@wur.nl</a>, <a href="mailto:pingou@pingoured.fr">pingou@pingoured.fr</a>
+    <br />
+    Author: Richard Finkers <a href="mailto:richard.finkers@wur.nl">richard.finkers@wur.nl</a>
+</p>
 
 <p>Provides biologist a way to mine through their QTL interval for a potential candidate gene
 using data integration.</p>
 
 <h2>Use this project:</h2>
 
-<p>A live instance of this project is freely available for Tomato at:
+<p>A live instance of this project is freely available for Tomato at: <br />
 <a href="http://www.plantbreeding.wur.nl/BreeDB/marker2seq/">http://www.plantbreeding.wur.nl/BreeDB/marker2seq/</a></p>
 
 <p>If you wish to run your own instance, building instructions are available below.</p>
@@ -62,17 +65,18 @@ build the sources using:</p>
 
 <p>mvn clean install</p>
 
-<p>This will run the unit-tests which are present in marker2sequence-lib.
-These tests relie on a sparql endpoint being available and containing a
-defined number of information.</p>
+<p>The unit-tests of <code>marker2sequence-lib</code> are off by default. These tests 
+relie on a sparql endpoint being available and containing a defined number 
+of information.
+</p>
 
-<p>To build the project without running the unit-test, you can run:</p>
+<p>To build the project with the unit-test, you can run:</p>
 
-<p>mvn clean install -Dmaven.test.skip=true</p>
+<p>mvn clean install -DskipTests=false</p>
 
 <h2>License</h2>
 
-<p>.. _Apache license, V2.0: <a href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a></p>
+<p>Apache license, V2.0: <a href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a></p>
 
 <p><code>Marker2Sequence</code> is licensed under the <code>Apache license, V2.0</code>_</p>
         </article>
