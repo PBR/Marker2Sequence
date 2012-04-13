@@ -63,5 +63,5 @@
             </html:form>
         </div>
     </div>
-
+    <p><bean:message key="m2s.github"/></p>
 </logic:present>
