@@ -25,14 +25,13 @@ Source:  https://github.com/PBR/Marker2Sequence
 Building this project:
 ----------------------
 
-This project uses maven to manage its dependencies, you can therefore easily
-build the sources using:
+This project uses maven to manage its dependencies, you can therefore build 
+the sources using:
 
  mvn clean install
 
 The unit-tests of ``marker2sequence-lib`` are off by default.
-These tests relie on a sparql endpoint being available and containing a
-defined number of information.
+A valid SPARQL endpoint is required to run use these unit tests.
 
 To build the project with the unit-test, you can run:
 
