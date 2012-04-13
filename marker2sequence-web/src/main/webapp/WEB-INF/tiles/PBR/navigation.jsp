@@ -186,14 +186,4 @@ Author     : Richard Finkers
     <html:link href="http://www.potatogenome.net " target="_blank" titleKey="project.pgsc"><bean:message key="project.pgsc"/></html:link>
     <html:link href="http://www.tomatoestoday.com" target="_blank" titleKey="resource.tomatoes.today"><bean:message key="resource.tomatoes.today"/></html:link>
     </div>
-<logic:present name="randomImage">
-    <html:img src="${randomImage}" alt="${randomImageAlt}"/>
-    <br class="clearfloat"/>
-    ${randomImageUrl}
-</logic:present>
-<logic:notPresent name="randomImage">
-    <%--Default random image--%>
-    <html:img srcKey="random.image.src" altKey="random.image.description"/>
-    <bean:message key="random.image.description"/>
-</logic:notPresent>
 <!-- end menues -->
