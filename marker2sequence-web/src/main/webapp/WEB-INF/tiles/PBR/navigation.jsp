@@ -12,25 +12,7 @@ Author     : Richard Finkers
 <div class="vertMenu">
     <table class="rootVoices vertical" cellspacing='0' cellpadding='0' border='0'>
         <tr><td class="rootVoice {menu: 'empty'}" onclick="window.open('<html:rewrite page='/'/>','_self')"><bean:message key="menu.home"/></td></tr>
-        <tr><td class="rootVoice {menu: 'menu_1'}" onclick="window.open('<html:rewrite page='/passport/'/>','_self')"><bean:message key="menu.search"/></td></tr>
-        <tr><td class="rootVoice {menu: 'menu_2'}" onclick="window.open('<html:rewrite page='/experiment/'/>','_self')"><bean:message key="menu.selections"/></td></tr>
-        <logic:present name="userConfig">
-            <tr><td class="rootVoice {menu: 'menu_4'}" onclick="window.open('<html:rewrite page='/ggtQtl/'/>','_self')"><bean:message key="menu.markers"/></td></tr>
-            <logic:present name="mapAvailableFlag" scope="session">
-                <tr><td class="rootVoice {menu: 'menu_5'}" onclick="window.open('<html:rewrite page='/ggtQtl/'/>','_self')"><bean:message key="menu.maps"/></td></tr>
-            </logic:present>
-            <tr><td class="rootVoice {menu: 'menu_6'}" onclick="window.open('<html:rewrite page='/trait/visualisationMethods.jsp'/>','_self')"><bean:message key="menu.associations"/></td></tr>
-        </logic:present>
-        <logic:notPresent name="user" scope="session">
-            <tr><td class="rootVoice {menu: 'empty'}" onclick="window.open('<html:rewrite page='/login/login.jsp'/>','_self')"><bean:message key="menu.login"/></td></tr>
-        </logic:notPresent>
         <tr><td class="rootVoice {menu: 'empty'}" onclick="window.open('<html:rewrite page='/marker2seq'/>','_self')"><bean:message key="menu.m2s"/></td></tr>
-        <logic:present name="user" scope="session">
-            <%--<tr><td class="rootVoice {menu: 'empty'}" onclick="window.open('<html:rewrite page='/snp/SelectSnpBreed.jsp'/>','_self')"><bean:message key="menu.snp"/></td></tr>--%>
-            <tr><td class="rootVoice {menu: 'menu_7'}"onclick="window.open('<html:rewrite page='/tools'/>','_self')"><bean:message key="menu.tools"/></td></tr>
-            <tr><td class="rootVoice {menu: 'empty'}" onclick="window.open('<html:rewrite page='/Logout.do?logoff=true'/>','_self')"><bean:message key="menu.logout"/></td></tr>
-            <tr><td class="rootVoice {menu:'menu_3'}" onclick="window.open('<html:rewrite page='/documents/index.jsp'/>','_self')"><bean:message key="menu.documents"/></td></tr>
-        </logic:present>
         <tr><td class="rootVoice {menu:'menu_8'}" onclick="window.open('<html:rewrite page='/links.jsp'/>','_self')"><bean:message key="menu.links"/></td></tr>
         <tr><td class="rootVoice {menu: 'empty'}" onclick="window.open('<html:rewrite page='/about.jsp'/>','_self')"><bean:message key="menu.about"/></td></tr>
     </table>
