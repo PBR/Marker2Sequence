@@ -8,6 +8,7 @@ Marker2sequence
 Provides biologist a way to mine through their QTL interval for a potential candidate gene
 using data integration.
 
+The project is published in bioinformatics (http://dx.doi.org/10.1093/bioinformatics/bts298)
 
 Use this project:
 -----------------
